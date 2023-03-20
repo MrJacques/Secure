@@ -233,7 +233,7 @@ That includes my referral code with Twilio which will earn me some free text if 
 
 Once you sign up, rename the ```twilio-sample.json``` to ```twilio.json``` and then edit with your information. The phones you want to send to will need to be authorized on Twilio.
 
-```json
+```
 {
    "twilio": {
        "notes": "to get free account - www.twilio.com/referral/ft9Jn1",
