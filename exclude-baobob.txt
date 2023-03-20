@@ -1,0 +1,14 @@
+.cache
+.mozilla
+plex
+.config/google-chrome
+Trash
+.local
+.bash_history
+.bash_history*
+.vnc
+.config/dconf
+venv
+.xsession-errors
+.xsession-errors.old
+

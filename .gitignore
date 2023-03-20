@@ -1,0 +1,23 @@
+# Real twilio file has secret keys
+twilio.json
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore virtual environment directories
+venv/
+
+# Ignore log files
+*.log
+/log/
+
+# Ignore backup files
+*~
+
+# Ignore compiled Bash scripts
+*.shc
+
+# Ignore editor and IDE configuration files
+.idea/
+.vscode/

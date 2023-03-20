@@ -1,0 +1,24 @@
+# Exclude Windows-specific files and directories
+/AppData/
+/NTUSER.*
+/Local Settings/
+/Windows/
+
+# Exclude files generated during development
+*.o
+*.obj
+*.pyc
+*.class
+*.exe
+*.dll
+
+# Exclude temporary files and directories
+*.tmp
+*.bak
+*.swp
+*.~*
+
+# Exclude version control system files and directories
+/.git/
+/.svn/
+/.hg/

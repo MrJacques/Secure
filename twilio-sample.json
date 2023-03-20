@@ -1,0 +1,17 @@
+{
+    "twilio": {
+        "notes": "https://www.twilio.com  - put your api details here, rename twilio.json",
+		"message_file": "twilioLastMessage.txt",
+        "account_sid": "YOUR SID HERE",
+        "auth_token": "YOUR AUTH TOKEN HERE",
+        "from_phone": "FROM PHONE",
+        "to_phones": [
+            "TO PHONE 1"
+        ],
+        "test": {
+            "account_sid": "YOUR SID HERE",
+            "auth_token": "TEST AUTH TOKEN",
+            "test_from": "TEST FROM PHONE"
+        }
+    }
+}
