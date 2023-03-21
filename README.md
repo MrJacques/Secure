@@ -1,3 +1,7 @@
+> **Warning****
+>
+> This is obsolete, there is a new version 
+
 ## Introduction
 
 I set a goal to create a secure and simple backup using a spare raspberry pi and external hard drive.  It didn’t need to be fast or encrypt the backup. I did want something secure, so no software on the clients (machines being backed up.)  To begin with, I would be backing up linux machines over a LAN so using rsync seems to be a natural choice.
@@ -91,14 +95,16 @@ ssh-keygen -t ecdsa -b 521
 
 After generating the ssh keys, it is important to connect to all the machines you plan on backing up at least once as the user you will be connecting with.  This is shown in the next section.
 
+> **Note**
+>
 >ECDSA is a type of public-key cryptography that uses elliptic curves to create and verify digital signatures. It's commonly used for secure communication over the internet, such as in SSH connections. The key length specifies the strength of the key, with longer keys generally being more secure but also taking longer to generate and use. A key length of 521 bits is considered very strong and is recommended for high-security applications.
-{.is-info}
 
 
 ## Get fstab working
 
+> **Note**
+>
 > An SSHFS mount is used with rsync rather than using ssh directly in rsync for enhanced security.  By using a read-only mount I reduce the chance of a misconfigured rsync deleting files on the machines to be backed up.
-{.is-info}
 
 In this step, get the remote drives mounted using fstab so they will always remount on boot.
 
@@ -127,9 +133,9 @@ RemoteUserID@RemoteHostname:/RemotePathToBackup/ /mnt/SimpleRemoteHostName/Data 
 The **RemoteUserID**, **RemoteHostnameand**, **RemotePathToBackup** and **SimpleRemoteHostName** all refer to the machine that is being backed up.  The remote hostname must be a valid network name, while the simple remote hostname can be a simplified name or nickname.  The final part of the mnt path **Data** should be replaced with something relevant for your setup.  The ```/home/**jp**``` is the home directory on the pi.
 
 uid and gid should match your local (the pi) uid and gid.
-
+> **Warning**
+>
 >**This will create a read only mount**.  There should never be a reason for this machine to modify files on the remote machine.
-{.is-warning}
 
 For example, I used the following to connect to a local machine:
 
@@ -448,8 +454,9 @@ Replace **machine** with the hostname that is having access revoked.
 
 Our goal here is to create a new ssh key, authorize it to be used to log into the pi (remotely with ssh), and finally move the new ssh keys to a USB device for safe keeping. 
 
+> **Note**
+>
 >if you lose the USB key, you can always use a monitor and keyboard to create a new key.
-{.is-info}
 
 These commands are run on the pi.
 
